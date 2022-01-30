@@ -37,12 +37,27 @@ function showList() {
 				progressList = `${progressList}\n   ${key},`
 		}
 	}
-	console.log(todoList);
-	console.log(doneList);
-	console.log(progressList);
+
+	if (todoList == 'To Do:') {
+		console.log('To Do:\n   -------');
+	} else {
+		console.log(todoList);
+	}
+
+	if (doneList == "Done:") {
+		console.log('Done:\n   -------');
+	} else {
+		console.log(doneList);
+	}
+
+	if (progressList == 'In Progress:') {
+		console.log('In Progress:\n    -------');
+	} else {
+		console.log(progressList);
+	}
 
 }
-changeStatus('fitness', 'In Progress');
+changeStatus('make a bed', 'In Progress');
 addTask('lern english');
 deleteTask('lunch');
 showList();
